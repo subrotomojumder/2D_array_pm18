@@ -3,15 +3,6 @@ int main(){
     int r, c;
     scanf("%d %d", &r, &c);
     int arr[r][c];
-    // print index
-    //     for(int i = 0; i < c; i++)
-    // {
-    //     for (int j = 0; j < c; j++)
-    //     {
-    //        printf("%d %d\n", i, j);
-    //     }
-        
-    // }
 
     for(int i = 0; i < r; i++)
     {
@@ -21,13 +12,26 @@ int main(){
         }
         
     }
-    for(int i = 0; i < r; i++)
+    int zero = 0;
+     for(int i = 0; i < r; i++)
     {
         for (int j = 0; j < c; j++)
         {
-           printf("%d ", arr[i][j]);
+          if (arr[i][j] == 0)
+          {
+           zero ++;
+          }
+          
         }
         
     }
+    if ( c * r == zero)
+    {
+        printf("This is zero matrix");
+    }else
+    {
+        printf("This is not zero matrix");
+    }
+    
     return 0;
 }
